@@ -1,0 +1,54 @@
+Started by user [8mha:////4FgAHah1tM9J5rmiPSS5pOBjDIBbGKfLsCExenJKfPaRAAAAlx+LCAAAAAAAAP9b85aBtbiIQTGjNKU4P08vOT+vOD8nVc83PyU1x6OyILUoJzMv2y+/JJUBAhiZGBgqihhk0NSjKDWzXb3RdlLBUSYGJk8GtpzUvPSSDB8G5tKinBIGIZ+sxLJE/ZzEvHT94JKizLx0a6BxUmjGOUNodHsLgAzWEgZu/dLi1CL9xJTczDwAj6GcLcAAAAA=[0madmin
+Running as SYSTEM
+Building in workspace /var/jenkins_home/workspace/maventest
+The recommended git tool is: NONE
+No credentials specified
+Cloning the remote Git repository
+Cloning repository https://github.com/PratikNichit1/mavenapp.git
+ > git init /var/jenkins_home/workspace/maventest # timeout=10
+Fetching upstream changes from https://github.com/PratikNichit1/mavenapp.git
+ > git --version # timeout=10
+ > git --version # 'git version 2.39.5'
+ > git fetch --tags --force --progress -- https://github.com/PratikNichit1/mavenapp.git +refs/heads/*:refs/remotes/origin/* # timeout=10
+ > git config remote.origin.url https://github.com/PratikNichit1/mavenapp.git # timeout=10
+ > git config --add remote.origin.fetch +refs/heads/*:refs/remotes/origin/* # timeout=10
+Avoid second fetch
+ > git rev-parse refs/remotes/origin/master^{commit} # timeout=10
+Checking out Revision e35230a2c298f89880217e3c14ea7398a2a12b76 (refs/remotes/origin/master)
+ > git config core.sparsecheckout # timeout=10
+ > git checkout -f e35230a2c298f89880217e3c14ea7398a2a12b76 # timeout=10
+Commit message: "maven commit"
+First time build. Skipping changelog.
+[maventest] $ /var/jenkins_home/tools/hudson.tasks.Maven_MavenInstallation/mymaven/bin/mvn test
+[INFO] Scanning for projects...
+[INFO] 
+[INFO] -----------------------< com.fortune.app:myapp >------------------------
+[INFO] Building myapp 1.0-SNAPSHOT
+[INFO]   from pom.xml
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- enforcer:3.5.0:enforce (enforce-maven) @ myapp ---
+[INFO] Rule 0: org.apache.maven.enforcer.rules.version.RequireMavenVersion passed
+[INFO] Rule 1: org.apache.maven.enforcer.rules.version.RequireJavaVersion passed
+[INFO] 
+[INFO] --- resources:3.3.1:resources (default-resources) @ myapp ---
+[INFO] skip non existing resourceDirectory /var/jenkins_home/workspace/maventest/src/main/resources
+[INFO] 
+[INFO] --- compiler:3.13.0:compile (default-compile) @ myapp ---
+[INFO] No sources to compile
+[INFO] 
+[INFO] --- resources:3.3.1:testResources (default-testResources) @ myapp ---
+[INFO] skip non existing resourceDirectory /var/jenkins_home/workspace/maventest/src/test/resources
+[INFO] 
+[INFO] --- compiler:3.13.0:testCompile (default-testCompile) @ myapp ---
+[INFO] No sources to compile
+[INFO] 
+[INFO] --- surefire:3.2.5:test (default-test) @ myapp ---
+[INFO] No tests to run.
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD SUCCESS
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time:  2.536 s
+[INFO] Finished at: 2025-01-26T12:26:40Z
+[INFO] ------------------------------------------------------------------------
+Finished: SUCCESS
